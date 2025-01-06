@@ -21,15 +21,15 @@ PICS = (environ.get('PICS', 'https://envs.sh/kJc.jpg')).split()
 
 
 # Admins & Users
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6285713858 7045947967').split()] # For Multiple Id Use One Space Between Each.
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6285713858 7045947967 7588706400').split()] # For Multiple Id Use One Space Between Each.
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]  # For Multiple Id Use One Space Between Each.
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 
 # This Channel Is For When User Start Your Bot Then Bot Send That User Name And Id In This Log Channel, Same For Group Also.
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002461306484'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002284239118'))
 
 # This Is File Channel Where You Upload Your File Then Bot Automatically Save It In Database 
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002370123896').split()]  # For Multiple Id Use One Space Between Each.
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002287832725').split()]  # For Multiple Id Use One Space Between Each.
 
 # auth_channel means force subscribe channel.
 # if REQUEST_TO_JOIN_MODE is true then force subscribe work like request to join fsub, else if false then work like normal fsub.
@@ -37,15 +37,15 @@ REQUEST_TO_JOIN_MODE = bool(environ.get('REQUEST_TO_JOIN_MODE', True)) # Set Tru
 TRY_AGAIN_BTN = bool(environ.get('TRY_AGAIN_BTN', True)) # Set True Or False (This try again button is only for request to join fsub not for normal fsub)
 
 # This Is Force Subscribe Channel, also known as Auth Channel 
-auth_channel = environ.get('AUTH_CHANNEL', '-1002428058754 -1002031329869') # give your force subscribe channel id here else leave it blank
+auth_channel = environ.get('AUTH_CHANNEL', '-1002488086781') # give your force subscribe channel id here else leave it blank
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 
 # This Channel Is For When User Request File With command or hashtag like - /request or #request
-reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002031329869 -1002428058754')
+reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002488086781')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 
 # This Is Your Bot Support Group Id , Here Bot Will Not Give File Because This Is Support Group.
-support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002491588102')
+support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002287360773')
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 
 # This Channel Is For Index Request 
@@ -63,7 +63,7 @@ DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://nitishraj66770:nitishr
 DATABASE_NAME = environ.get('DATABASE_NAME', "techvjclonefilterbot")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'vjcollection')
 
-MULTIPLE_DATABASE = bool(environ.get('MULTIPLE_DATABASE', True)) # Set True or False
+MULTIPLE_DATABASE = bool(environ.get('MULTIPLE_DATABASE', False)) # Set True or False
 
 # If Multiple Database Is True Then Fill All Three Below Database Uri Else You Will Get Error.
 O_DB_URI = environ.get('O_DB_URI', "mongodb+srv://nr385708:bs6GdimYoAzmHbRF@cluster0.xtpwl.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")   # This Db Is For Other Data Store
@@ -72,7 +72,7 @@ S_DB_URI = environ.get('S_DB_URI', "mongodb+srv://bazaarmovies:9pdULpaWpW0TDoCc@
 
 
 # Premium And Referal Settings
-PREMIUM_AND_REFERAL_MODE = bool(environ.get('PREMIUM_AND_REFERAL_MODE', True)) # Set Ture Or False
+PREMIUM_AND_REFERAL_MODE = bool(environ.get('PREMIUM_AND_REFERAL_MODE', False)) # Set Ture Or False
 
 # If PREMIUM_AND_REFERAL_MODE is True Then Fill Below Variable, If Flase Then No Need To Fill.
 REFERAL_COUNT = int(environ.get('REFERAL_COUNT', '15')) # number of referal count
@@ -88,10 +88,10 @@ PUBLIC_FILE_CHANNEL = environ.get('PUBLIC_FILE_CHANNEL', 'publicchannel0077') # 
 
 
 # Links
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/moviebazaar7')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/New_movie_bazaar7')
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'moviesbazaarsupp') # Support Chat Link Without https:// or @
-OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/Keshavraj_77')
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/moviesearch6')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/+dLXyYxTK6BpkMzc1')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'moviesearch6') # Support Chat Link Without https:// or @
+OWNER_LNK = environ.get('OWNER_LNK', 'https://t.me/Singhje')
 
 # True Or False
 AI_SPELL_CHECK = bool(environ.get('AI_SPELL_CHECK', True))
